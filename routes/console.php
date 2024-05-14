@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+
+Artisan::command('init-telegram-menu', function () {
+    /** @var \DefStudio\Telegraph\Models\TelegraphBot $telegramBot */
+    $telegramBot = \DefStudio\Telegraph\Models\TelegraphBot::find(1);
+    dd($telegramBot->registerCommands([
+        'actions' => 'Choose action',
+    ])->send());
+
+})->purpose('Initialize telegram menu');
