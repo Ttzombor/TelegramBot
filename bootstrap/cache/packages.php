@@ -1,4 +1,15 @@
 <?php return array (
+  'defstudio/telegraph' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'DefStudio\\Telegraph\\TelegraphServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Telegraph' => 'DefStudio\\Telegraph\\Facades\\Telegraph',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 
